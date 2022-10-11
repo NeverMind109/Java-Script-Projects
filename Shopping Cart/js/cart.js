@@ -4,8 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const cart = document.querySelector(".cart");
   const cartQuantity = document.querySelector(".cart__quantity");
   const fullPrice = document.querySelector(".fullprice");
-  let price = 0;
+  const orderModalIsOpenProd = document.querySelector(".order-modal__btn");
+  const orderModalList = document.querySelector(".order-modal__list");
+  const orderModalQuantity = document.querySelector(
+    ".order-modal__quantity span"
+  );
+  const orderModalSum = document.querySelector(".order-modal__sum span");
+
   let randomId = 0;
+  let price = 0;
 
   const priceWithoutSpaces = (str) => {
     return str.replace(/\s/g, "");
@@ -138,6 +145,69 @@ document.addEventListener("DOMContentLoaded", () => {
     updateStorage();
   };
 
+  // modal
+  let flag = 0;
+  orderModalIsOpenProd.addEventListener("click", (e) => {
+    if (flag == 0) {
+      orderModalIsOpenProd.classList.add("open");
+      orderModalList.style.display = "block";
+      flag = 1;
+    } else {
+      orderModalIsOpenProd.classList.remove("open");
+      orderModalList.style.display = "none";
+      flag = 0;
+    }
+  });
+
+  // modal order template
+  const generateModalProduct = (img, title, price, id) => {
+    return `
+    <li class="order-modal__item">
+      <article class="order-modal__product order-product" data-id=${id}>
+        <img
+          class="order-product__img"
+          src="${img}"
+          alt="Macbook"
+        />
+        <div class="order-product__text">
+          <h3 class="order-product__title">
+            ${title}
+          </h3>
+          <span class="order-product__price">${normalPrice(price)}</span>
+        </div>
+        <button class="order-product__delete">Удалить</button>
+      </article>
+    </li>
+    `;
+  };
+
+  const modal = new GraphModal({
+    isOpen: (modal) => {
+      let array = cartProductsList.querySelector(".simplebar-content").children;
+      let fullprice = fullPrice.textContent;
+      let length = array.length;
+      orderModalSum.textContent = `${fullprice}`;
+      orderModalQuantity.textContent = `${length} шт.`;
+
+      for (item of array) {
+        let img = item.querySelector(".cart-product__img").getAttribute("src");
+        let title = item.querySelector(".cart-product__title").textContent;
+        let priceString = priceWithoutSpaces(
+          item.querySelector(".cart-product__price").textContent
+        );
+        let id = item.querySelector(".cart-product").dataset.id;
+
+        orderModalList.insertAdjacentHTML(
+          "afterbegin",
+          generateModalProduct(img, title, priceString, id)
+        );
+      }
+    },
+    isClose: () => {
+      console.log("closed");
+    },
+  });
+
   // total price for local storage function
   const countSum = () => {
     document.querySelectorAll(".cart-content__item").forEach((el) => {
@@ -178,4 +248,18 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("products");
     }
   };
+
+  // delete items from modal
+  document.querySelector(".modal").addEventListener("click", (e) => {
+    if (e.target.classList.contains("order-product__delete")) {
+      let deleteBtn = e.target;
+      let id = deleteBtn.closest(".order-modal__product").dataset.id;
+      let cartProduct = document
+        .querySelector(`.cart-content__product[data-id='${id}']`)
+        .closest(".cart-content__item");
+
+      deleteProducts(cartProduct);
+      deleteBtn.closest(".order-modal__product").remove();
+    }
+  });
 });

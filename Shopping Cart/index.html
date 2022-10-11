@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
+    <link rel="stylesheet" href="libs/modal/modal.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -35,7 +36,13 @@
                   <span>Итого:</span>
                   <span class="fullprice">568 789 P</span>
                 </div>
-                <button class="cart-content__btn btn">Перейти в корзину</button>
+                <button
+                  class="cart-content__btn btn"
+                  data-graph-path="modal"
+                  data-graph-animation="fadeInUp"
+                >
+                  Перейти в корзину
+                </button>
               </div>
             </div>
           </div>
@@ -589,10 +596,63 @@
             </li>
           </ul>
         </div>
-        <div class="height"></div>
       </div>
+      <div class="height"></div>
     </main>
+    <div class="modal">
+      <div
+        class="modal__container order-modal"
+        role="dialog"
+        aria-modal="true"
+        data-graph-target="modal"
+      >
+        <div class="modal__content order-modal__content">
+          <div class="order-modal__top">
+            <h2 class="order-modal__title">Оформление заказа</h2>
+            <span class="order-modal__number">Заказ № 3456 67</span>
+          </div>
+          <div class="order-modal__info">
+            <div class="order-modal__quantity order-modal__info-item">
+              Товаров в заказе: <span>3 шт</span>
+            </div>
+            <div class="order-modal__sum order-modal__info-item">
+              Общая сумма заказа: <span>568 789 ₽</span>
+            </div>
+            <div class="order-modal__products order-modal__info-item">
+              <button class="order-modal__btn">Состав заказа</button>
+              <ul class="order-modal__list"></ul>
+            </div>
+          </div>
+          <form class="order-modal__form order" action="#">
+            <label class="order__label">
+              <span class="order__text">Ваше имя</span>
+              <input class="order__input" type="text" required />
+            </label>
+            <label class="order__label">
+              <span class="order__text">Номер телефона</span>
+              <input
+                class="order__input"
+                type="tel"
+                placeholder="+7 (___)___-__-__"
+                required
+              />
+            </label>
+            <label class="order__label">
+              <span class="order__text">Электронная почта</span>
+              <input
+                class="order__input"
+                type="email"
+                placeholder="post@gmail.com"
+                required
+              />
+            </label>
+            <button class="order__btn btn">Оформить заказ</button>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="js/simplebar.js"></script>
+    <script src="libs/modal/modal.js"></script>
     <script src="js/product.js"></script>
     <script src="js/fixed-block.js"></script>
     <script src="js/cart.js"></script>
