@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mobile-container">
+      <form>
+        <input class="search-input" id="search-term" type="text" />
+        <button class="search-btn" id="search">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+
+      <div class="fav-container">
+        <h3 class="title">Favourite Meals</h3>
+        <ul class="fav-meals" id="fav-meals"></ul>
+      </div>
+      <div class="meals" id="meals"></div>
+    </div>
+
+    <div class="popup-container hidden" id="popup">
+      <div class="popup">
+        <button class="popup-close" id="popup-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="popup-info" id="popup-info"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
