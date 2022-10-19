@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #222650;
+    margin: 0;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #373b69;
+    padding: 1.5rem;
+}
+.movie-search {
+    font-size: 1rem;
+    color: #7378c5;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #22254b;
+}
+.movie-search::placeholder {
+    font-size: inherit;
+    font-size: 1rem;
+    color: #7378c5;
+}
+.movie-search:focus {
+    outline: none;
+    background-color: #22254b;
+    color: #fff;
+}
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.movie {
+    position: relative;
+    width: 300px;
+    border-radius: 3px;
+    background-color: #373b69;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 1rem;
+}
+.movie:hover .movie-overview {
+    transform: translateY(0);
+}
+.movie-img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+.movie-title {
+    -webkit-line-clamp: 2;
+    -ms-line-clamp: 2;
+    line-clamp: 2;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
+    margin: 0;
+}
+.movie-subtitle {
+    display: block;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+.movie-rate {
+    font-weight: 600;
+    background-color: #222650;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+}
+.movie-rate.green {
+    color: rgb(39, 189, 39);
+}
+.movie-rate.orange {
+    color: orange;
+}
+.movie-rate.red {
+    color: rgb(189, 42, 42);
+}
+.movie-overview {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    overflow: auto;
+    background-color: #fff;
+    color: #000;
+    padding: 2rem;
+    transform: translateY(101%);
+    transition: transform 0.3s ease;
+}
