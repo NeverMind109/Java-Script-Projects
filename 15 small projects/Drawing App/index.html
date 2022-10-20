@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="canvas" width="896" height="800"></canvas>
+    <div class="toolbox">
+      <button class="toolbox-el btn" id="decrease">-</button>
+      <span class="toolbox-el size">10</span>
+      <button class="toolbox-el btn" id="increase">+</button>
+      <input class="toolbox-el btn color-input" type="color" />
+      <button class="toolbox-el btn clear-btn" id="clear">X</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
