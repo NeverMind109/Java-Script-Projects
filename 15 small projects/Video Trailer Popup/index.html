@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Trailer Popup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <img class="poster-img" src="./img/poster-img.jpg" alt="Movie Poster" />
+      <h2 class="title">Movie Title</h2>
+      <p class="descr">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum culpa optio
+        at eius id officia corrupti accusantium tempore repellendus
+        necessitatibus minus, sapiente aspernatur et ipsum, non commodi?
+        Incidunt, est odit?
+      </p>
+      <button class="btn video-btn" id="open-trailer">Watch now</button>
+    </div>
+    <div class="trailer-container">
+      <video class="trailer-video" src="./video/trailer.mp4" controls></video>
+      <button class="btn close-btn" id="close-trailer">
+        <i class="fas fa-times fa-2x"></i>
+      </button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

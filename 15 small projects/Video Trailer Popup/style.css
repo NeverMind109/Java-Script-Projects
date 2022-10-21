@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+}
+.main-container {
+    max-width: 550px;
+    padding: 15px;
+}
+.poster-img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.descr {
+    margin-bottom: 15px;
+}
+.btn {
+    font-family: inherit;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+.video-btn {
+    color: #000;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: color 0.2s;
+}
+.video-btn:hover {
+    color: orange;
+}
+.video-btn:focus {
+    outline: none;
+}
+.close-btn {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+}
+.trailer-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s;
+}
+.trailer-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+.trailer-video {
+    position: relative;
+    max-width: 900px;
+    outline: none;
+}
+
+@media (max-width: 991px) {
+    .trailer-video {
+        max-width: 90%;
+    }
+}
