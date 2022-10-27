@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convert Text to File</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="converter">
+      <textarea
+        class="converter__textarea"
+        placeholder="Enter something to save"
+        required
+      ></textarea>
+      <div class="converter__panel">
+        <div class="converter__element">
+          <label class="converter__label" for="file-name">File Name</label>
+          <input
+            class="converter__input"
+            id="file-name"
+            type="text"
+            placeholder="Enter file name"
+          />
+        </div>
+        <div class="converter__element">
+          <label class="converter__label">Save as</label>
+          <div class="converter__menu">
+            <select class="converter__select">
+              <option class="converter__option" value="text/plain">
+                Text File (.txt)
+              </option>
+              <option class="converter__option" value="text/javascript">
+                JS File (.js)
+              </option>
+              <option class="converter__option" value="text/html">
+                HTML File (.html)
+              </option>
+              <option class="converter__option" value="image/svg+xml">
+                SVG File (.svg)
+              </option>
+              <option class="converter__option" value="application/msword">
+                Doc File (.doc)
+              </option>
+              <option
+                class="converter__option"
+                value="application/vnd.ms-powerpoint"
+              >
+                PPT File (.ppt)
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button class="converter__btn">Save As Text File</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
