@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Range Slider with Min-Max Input</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="range-slider">
+      <div class="range-slider__header">
+        <h2 class="range-slider__title">Range Slider</h2>
+        <p class="range-slider__descr">
+          Use slider or either min and max price
+        </p>
+      </div>
+      <div class="range-slider__body">
+        <div class="range-slider__field">
+          <span class="range-slider__text">Min</span>
+          <input
+            class="range-slider__input-value"
+            data-id="range-min-value"
+            type="number"
+            value="2500"
+          />
+        </div>
+        <div class="range-slider__separator">-</div>
+        <div class="range-slider__field">
+          <span class="range-slider__text">Max</span>
+          <input
+            class="range-slider__input-value"
+            data-id="range-max-value"
+            type="number"
+            value="7500"
+          />
+        </div>
+      </div>
+      <div class="range-slider__slider">
+        <div class="range-slider__progress"></div>
+      </div>
+      <div class="range-slider__progress-box">
+        <input
+          class="range-slider__input"
+          data-id="range-min-input"
+          type="range"
+          min="0"
+          max="10000"
+          value="2500"
+          step="100"
+        />
+        <input
+          class="range-slider__input"
+          data-id="range-max-input"
+          type="range"
+          min="0"
+          max="10000"
+          value="7500"
+          step="100"
+        />
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
