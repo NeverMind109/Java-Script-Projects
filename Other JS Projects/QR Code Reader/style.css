@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3e2fd;
+    margin: 0;
+}
+.qr-reader {
+    height: 270px;
+    width: 420px;
+    border-radius: 7px;
+    background-color: #0b85ff;
+    padding: 30px 30px 35px;
+    transition: height 0.2s ease;
+}
+.qr-reader.active {
+    height: 525px;
+}
+.qr-reader.active .qr-reader__form {
+    height: 225px;
+    pointer-events: none;
+}
+.qr-reader.active .qr-reader__code {
+    display: block;
+}
+.qr-reader.active .qr-reader__content {
+    display: none;
+}
+.qr-reader.active .qr-reader__details {
+    opacity: 1;
+    pointer-events: auto;
+}
+.qr-reader__form {
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: height 0.2s ease;
+    margin-bottom: 25px;
+}
+.qr-reader__code {
+    display: none;
+    max-width: 148px;
+}
+.qr-reader__icon {
+    font-size: 55px;
+    color: #0b85ff;
+    margin-bottom: 15px;
+}
+.qr-reader__descr {
+    font-size: 16px;
+    color: #0b85ff;
+}
+.qr-reader__details {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s 0.05s ease;
+}
+.qr-reader__textarea {
+    width: 100%;
+    height: 128px;
+    font-size: 18px;
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+.qr-reader__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.qr-reader__btn {
+    height: 55px;
+    width: calc(100% / 2 - 10px);
+    font-size: 16px;
+    font-weight: 500;
+    color: #0b85ff;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

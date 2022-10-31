@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Reader</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="qr-reader">
+      <form class="qr-reader__form" action="#">
+        <input class="qr-reader__input" type="file" hidden />
+        <div class="qr-reader__content">
+          <i class="fas fa-cloud-upload qr-reader__icon"></i>
+          <p class="qr-reader__descr">Upload QR Code to Scan</p>
+        </div>
+      </form>
+      <div class="qr-reader__details">
+        <textarea class="qr-reader__textarea" disabled></textarea>
+        <div class="qr-reader__buttons">
+          <button class="qr-reader__btn" id="close-btn">Close</button>
+          <button class="qr-reader__btn" id="copy-btn">Copy Text</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
