@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Right Click Context Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menu__content">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <button class="menu__btn">
+              <i class="uil uil-eye menu__icon"></i>
+              <span class="menu__text">Preview</span>
+            </button>
+          </li>
+          <li class="menu__item menu__item-share">
+            <span class="menu__btn">
+              <div class="menu__btn-wrapper">
+                <i class="uil uil-share menu__icon"></i>
+                <span class="menu__text">Share</span>
+              </div>
+            </span>
+            <i class="uil uil-angle-right menu__arrow"></i>
+            <ul class="menu__share-list">
+              <li class="menu__item">
+                <i class="uil uil-twitter-alt menu__icon"></i>
+                <span class="menu__text">Twitter</span>
+              </li>
+              <li class="menu__item">
+                <i class="uil uil-instagram menu__icon"></i>
+                <span class="menu__text">Instagram</span>
+              </li>
+              <li class="menu__item">
+                <i class="uil uil-dribbble menu__icon"></i>
+                <span class="menu__text">Dribble</span>
+              </li>
+              <li class="menu__item">
+                <i class="uil uil-telegram-alt menu__icon"></i>
+                <span class="menu__text">Telegram</span>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              <i class="uil uil-link-alt menu__icon"></i>
+              <span class="menu__text">Get Link</span>
+            </button>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              <i class="uil uil-edit menu__icon"></i>
+              <span class="menu__text">Rename</span>
+            </button>
+          </li>
+          <li class="menu__item">
+            <button class="menu__btn">
+              <i class="uil uil-trash-alt menu__icon"></i>
+              <span class="menu__text">Delete</span>
+            </button>
+          </li>
+        </ul>
+        <div class="menu__item menu__settings">
+          <button class="menu__btn">
+            <i class="uil uil-setting menu__icon"></i>
+            <span class="menu__text">Settings</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
