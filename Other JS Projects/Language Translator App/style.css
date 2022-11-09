@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: #5372f0;
+    margin: 0;
+}
+.translator {
+    width: 690px;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 30px;
+}
+.translator__wrapper {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.translator__fields {
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+.translator__textarea {
+    height: 250px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+.translator__result-field {
+    border-left: 1px solid #bbb;
+    border-radius: 0px;
+}
+.translator__panel , 
+.translator__control, 
+.translator__btns,
+.translator__control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.translator__panel {
+    list-style-type: none;
+    padding: 12px 15px;
+}
+.translator__from-btns {
+    border-right: 1px solid #bbb;
+    margin-right: 15px;
+}
+.translator__into-btns {
+    border-left: 1px solid #bbb;
+    margin-left: 15px;
+}
+.translator__btns {
+    width: 38%;
+}
+.translator__control-btn {
+    justify-content: center;
+    width: 50px;
+    font-size: 14px;
+    color: #9f9f9f;
+}
+.translator__select {
+    font-family: inherit;
+    font-size: 18px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.translator__exchange {
+    font-size: 16px;
+    color: #9f9f9f;
+    padding: 5px 10px;
+}
+.translator__translate-btn {
+    width: 100%;
+    font-size: 17px;
+    color: #fff;
+    padding: 14px;
+    border-radius: 5px;
+    background: #5372f0;
+}

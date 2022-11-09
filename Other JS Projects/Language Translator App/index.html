@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Translator App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="translator">
+      <div class="translator__wrapper">
+        <div class="translator__fields">
+          <textarea
+            class="translator__textarea translator__input-field"
+            id="from-text"
+            type="text"
+            placeholder="Enter text"
+          ></textarea>
+          <textarea
+            class="translator__textarea translator__result-field"
+            id="into-text"
+            type="text"
+            placeholder="Translation"
+            readonly
+            disabled
+          ></textarea>
+        </div>
+        <ul class="translator__panel">
+          <li class="translator__control">
+            <div class="translator__btns translator__from-btns">
+              <button
+                class="fas fa-volume-up translator__control-btn"
+                data-id="from-listen-btn"
+              ></button>
+              <button
+                class="fas fa-copy translator__control-btn"
+                data-id="from-copy-btn"
+              ></button>
+            </div>
+            <select class="translator__select"></select>
+          </li>
+          <li class="translator__control">
+            <button
+              class="fas fa-exchange-alt translator__exchange"
+              id="exchange-values-btn"
+            ></button>
+          </li>
+          <li class="translator__control">
+            <select class="translator__select"></select>
+            <div class="translator__btns translator__into-btns">
+              <button
+                class="fas fa-volume-up translator__control-btn"
+                data-id="into-listen-btn"
+              ></button>
+              <button
+                class="fas fa-copy translator__control-btn"
+                data-id="into-copy-btn"
+              ></button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="translator__translate-btn" id="translate-btn">
+        Translate Text
+      </button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
