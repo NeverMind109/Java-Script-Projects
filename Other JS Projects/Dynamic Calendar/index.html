@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Calendar</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calendar">
+      <div class="calendar__header">
+        <p class="calendar__date"></p>
+        <div class="calendar__icons">
+          <button
+            class="material-symbols-outlined calendar__btn"
+            data-id="prev-month-btn"
+          >
+            chevron_left
+          </button>
+          <button
+            class="material-symbols-outlined calendar__btn"
+            data-id="next-month-btn"
+          >
+            chevron_right
+          </button>
+        </div>
+      </div>
+      <div class="calendar__body">
+        <ul class="calendar__list calendar__weeks">
+          <li class="calendar__list-item calendar__weeks-item">Пн</li>
+          <li class="calendar__list-item calendar__weeks-item">Вт</li>
+          <li class="calendar__list-item calendar__weeks-item">Ср</li>
+          <li class="calendar__list-item calendar__weeks-item">Чт</li>
+          <li class="calendar__list-item calendar__weeks-item">Пт</li>
+          <li class="calendar__list-item calendar__weeks-item">Сб</li>
+          <li class="calendar__list-item calendar__weeks-item">Вс</li>
+        </ul>
+        <ul class="calendar__list calendar__days"></ul>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
