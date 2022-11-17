@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email and Password Validation</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal">
+      <h2 class="modal__title">SignUp</h2>
+      <form class="modal__form" action="#">
+        <div class="modal__wrapper" id="modal-email">
+          <div class="modal__field">
+            <input
+              class="modal__input email-input"
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <span class="modal__error" id="email-error">
+            <i class="bx bx-error-circle modal__error-icon"></i>
+            <p class="modal__error-text">Please enter a valid email</p>
+          </span>
+        </div>
+
+        <div class="modal__wrapper" id="create-password">
+          <div class="modal__field">
+            <input
+              class="modal__input create-password-input"
+              type="password"
+              placeholder="Create your password"
+            />
+            <i class="bx bx-hide modal__show-hide"></i>
+          </div>
+          <span
+            class="modal__error modal__error--start"
+            id="create-password-error"
+          >
+            <i
+              class="bx bx-error-circle modal__error-icon modal__error-icon--start"
+            ></i>
+            <p class="modal__error-text">
+              Please enter at least 8 characters with numbers, symbols, small
+              and capital letters
+            </p>
+          </span>
+        </div>
+
+        <div class="modal__wrapper" id="confirm-password">
+          <div class="modal__field">
+            <input
+              class="modal__input confirm-password-input"
+              type="password"
+              placeholder="Confirm your password"
+            />
+            <i class="bx bx-hide modal__show-hide"></i>
+          </div>
+          <span class="modal__error" id="confirm-password-error">
+            <i class="bx bx-error-circle modal__error-icon"></i>
+            <p class="modal__error-text">Password don't match</p>
+          </span>
+        </div>
+        <div class="modal__btn-wrapper">
+          <button class="modal__btn" type="submit">Submit Now</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
