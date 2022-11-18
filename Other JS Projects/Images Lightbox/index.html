@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images Lightbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="gallery__wrapper">
+        <div class="gallery__image">
+          <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="./img/img-1.jpg" alt="" />
+          </span>
+        </div>
+        <div class="gallery__image">
+          <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="./img/img-2.jpg" alt="" />
+          </span>
+        </div>
+        <div class="gallery__image">
+          <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="./img/img-3.jpg" alt="" />
+          </span>
+        </div>
+        <div class="gallery__image">
+          <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="./img/img-4.jpg" alt="" />
+          </span>
+        </div>
+        <div class="gallery__image">
+          <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="./img/img-5.jpg" alt="" />
+          </span>
+        </div>
+        <div class="gallery__image">
+          <span class="gallery__img-wrapper">
+            <img class="gallery__img" src="./img/img-6.jpg" alt="" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="preview">
+      <div class="preview__details">
+        <span class="preview__title">
+          Image
+          <p class="preview__descr preview__current-img"></p>
+          of
+          <p class="preview__descr preview__total-img"></p>
+        </span>
+        <button class="fas fa-times preview__btn preview__close"></button>
+      </div>
+      <div class="preview__slides">
+        <div class="preview__slide preview__slide--prev">
+          <button
+            class="fas fa-angle-left preview__btn preview__slide-btn--prev"
+          ></button>
+        </div>
+        <div class="preview__slide preview__slide--next">
+          <button
+            class="fas fa-angle-right preview__btn preview__slide-btn--next"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <div class="shadow"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
