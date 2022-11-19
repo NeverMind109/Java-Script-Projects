@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Captcha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="captcha">
+      <h2 class="captcha__header">Captcha in JavaScript</h2>
+      <div class="captcha__area">
+        <div class="captcha__image">
+          <img class="captcha__img" src="./captcha-bg.png" alt="" />
+          <span class="captcha__text"></span>
+        </div>
+        <button class="captcha__btn captcha__reload">
+          <i class="fas fa-redo-alt captcha__icon"></i>
+        </button>
+      </div>
+      <form class="captcha__form" action="#">
+        <input
+          class="captcha__input"
+          type="text"
+          placeholder="Enter captcha"
+          maxlength="6"
+          required
+        />
+        <button class="captcha__btn captcha__check">Check</button>
+      </form>
+      <div class="captcha__message"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
