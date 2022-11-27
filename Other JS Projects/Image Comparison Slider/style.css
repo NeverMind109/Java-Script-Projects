@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #efefef;
+    margin: 0;
+}
+.slider {
+    position: relative;
+    height: 500px;
+    width: 750px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 7px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+.slider__images {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.slider__image-first {
+    height: 100%;
+    width: 100%;
+    background: url('./images/img.jpg') no-repeat;
+}
+.slider__image-second {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: url('./images/img.png') no-repeat;
+}
+.slider__divider {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+.slider__drag-line {
+    position: absolute;
+    left: 49.85%;
+    width: 3px;
+    height: 486px;
+    pointer-events: none;
+}
+.slider__drag-line::before,
+.slider__drag-line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 222px;
+    background: #fff;
+}
+.slider__drag-line::before {
+    top: 0;
+}
+.slider__drag-line::after {
+    bottom: 0;
+}
+.slider__drag-el {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 42px;
+    width: 42px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.slider__drag-el::before,
+.slider__drag-el::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 10px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+.slider__drag-el::before {
+    left: 40%;
+    border-left-color: #fff;
+}
+.slider__drag-el::after {
+    left: 60%;
+    border-top-color: #fff;
+}
+.slider__divider-line {
+    width: 100%;
+    outline: none;
+    background: none;
+    -webkit-appearance: none;
+}
+.slider__divider-line::-webkit-slider-thumb {
+    height: 486px;
+    width: 3px;
+    background: none;
+    cursor: col-resize;
+    -webkit-appearance: none;
+}
