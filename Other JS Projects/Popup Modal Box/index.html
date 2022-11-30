@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Modal Box</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <button class="popup__btn" id="open-modal-btn">Show Modal</button>
+      <span class="popup__overlay"></span>
+      <div class="popup__content">
+        <i class="fa-regular fa-circle-check popup__icon"></i>
+        <h2 class="popup__title">Completed</h2>
+        <p class="popup__descr">
+          You have succesfully downloaded all the source code files.
+        </p>
+        <div class="popup__buttons">
+          <button class="popup__modal-btn" id="close-modal-btn">
+            OK, Close
+          </button>
+          <button class="popup__modal-btn">Open Files</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
